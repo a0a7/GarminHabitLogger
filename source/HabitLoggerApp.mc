@@ -21,6 +21,13 @@ class HabitLoggerApp extends Application.AppBase {
         return [ new HabitLoggerView(), new HabitLoggerDelegate() ];
     }
 
+    var timestamps = new Array<Number>[100];
+
+    function markHabit() {
+        var timestamp = CURRENT_TIME_DEFAULT(); // Need to find how to get time
+        timestamps.add(timestamp);
+    }
+
 }
 
 function getApp() as HabitLoggerApp {
